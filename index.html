@@ -69,10 +69,13 @@ function signup(){
 
     localStorage.setItem("username",username);
     localStorage.setItem("password",password);
-
+	localStorage.setItem("email", email);
+	
     alert("Account Created Successfully");
 
     window.location="login.html";
+
+	retuen false;
 }
 </script>
 

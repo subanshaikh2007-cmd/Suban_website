@@ -54,11 +54,8 @@ function signup(){
 
     var username=document.getElementById("username").value;
     var password=document.getElementById("password").value;
-
-    if(username=="" || password==""){
-        alert("Fill all fields");
-        return;
-    }
+	var conpass = document.getElementById("con").value;
+    var email = document.getElementById("email").value;
 
 	if(username=="" || password=="" || conpass=="" || email==""){
         alert("Please fill all fields.");

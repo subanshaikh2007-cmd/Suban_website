@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign Up</title>
+
+<style>
+body{
+    font-family:Arial;
+    background-image:url('Laptop.jpeg');
+	background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: 100px;
+}
+
+p{
+	color:white;
+}
+
+.container{
+    width: 350px;
+            margin: auto;
+            background: rgba(0,0,0,0.8);
+            padding: 20px;
+            border-radius: 15px;
+}
+
+input{
+    width:90%;
+    padding:10px;
+    margin:10px;
+}
+
+button{
+    width:95%;
+    padding:10px;
+    background:green;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+a{
+    text-decoration:none;
+}
+
+h2{
+	color:white;
+}
+</style>
+
+<script>
+function signup(){
+
+    var username=document.getElementById("username").value;
+    var password=document.getElementById("password").value;
+
+    if(username=="" || password==""){
+        alert("Fill all fields");
+        return;
+    }
+
+    localStorage.setItem("username",username);
+    localStorage.setItem("password",password);
+
+    alert("Account Created Successfully");
+
+    window.location="login.html";
+}
+</script>
+
+</head>
+
+<body>
+
+<form action="https://formsubmit.co/subanshaikh2007@gmail.com" method="post" align="center">
+
+<div class="container" align="center">
+
+<h2>Sign Up</h2>
+
+<input type="text" id="username" placeholder="Enter Username"><br>
+
+<input type="password" id="password" placeholder="Enter Password"><br>
+
+<button onclick="signup()">Sign Up</button>
+
+<br><br>
+
+<p>Already have an account?
+
+<a href="login.html">Login</a>
+</p>
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Login</title>
+
+<style>
+p{
+	color:white;
+}
+body{
+    font-family:Arial;
+    background-image:url('Laptop.jpeg');
+	background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: 100px;
+}
+
+.container{
+width: 350px;
+            margin: auto;
+            background: rgba(0,0,0,0.8);
+            padding: 20px;
+            border-radius: 15px;
+}
+
+input{
+    width:90%;
+    padding:10px;
+    margin:10px;
+}
+
+button{
+    width:95%;
+    padding:10px;
+    background:blue;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+h2{
+	color:white;
+}
+
+</style>
+
+<script>
+
+function login(){
+
+    var user=document.getElementById("username").value;
+    var pass=document.getElementById("password").value;
+
+    var savedUser=localStorage.getItem("username");
+    var savedPass=localStorage.getItem("password");
+
+    if(user==savedUser && pass==savedPass){
+
+        alert("Login Successful");
+
+        window.location="home1.html";
+
+    }
+    else{
+
+        alert("Invalid Username or Password");
+
+    }
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="container" align="center">
+
+<h2>Login</h2>
+
+<input type="text" id="username" placeholder="Username"><br>
+
+<input type="password" id="password" placeholder="Password"><br>
+
+<button onclick="login()">Login</button>
+
+<br><br>
+<p>
+Don't have an account?
+
+<a href="index2.html">Sign Up</a>
+</p>
+</div>
+
+</body>
+</html>
